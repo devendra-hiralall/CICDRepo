@@ -6,10 +6,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
+        
       - name: Cypress run
         uses: cypress-io/github-action@v6
-          with:
-          browser: chrome
-          spec: cypress-test/cypress/e2e/testFile.cy.js
+        with:
+          spec: cypress/e2e/spec1.cy.js
